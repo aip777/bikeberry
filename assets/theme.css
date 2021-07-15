@@ -434,7 +434,12 @@ th {
 .product-gallery__carousel.is-fade .flickity-slider > * {
   transition: opacity 0.3s linear !important;
 }
-
+.nav-bar ul li {
+    margin-right: 10px;
+}
+.tmenu_navbar .tmenu_item--root > .tmenu_item_link{
+height:auto !important;
+}
 @-webkit-keyframes drift-fadeZoomIn {
   0% {
     transform: scale(1.2);

@@ -1,9 +1,7 @@
 <footer class="footer" data-section-id="{{ section.id }}" data-section-type="footer" role="contentinfo">
+  {% include 'judgeme_widgets', widget_type: 'judgeme_verified_reviews_count_badge', concierge_install: true %}
+  <center>{% include 'judgeme_widgets', widget_type: 'judgeme_all_reviews_text', concierge_install: true %}</center>
   <div class="container">
-    <div style="text-align: center">
-    {% include 'judgeme_widgets', widget_type: 'judgeme_verified_reviews_count_badge', concierge_install: true %}
-    {% include 'judgeme_widgets', widget_type: 'judgeme_all_reviews_text', concierge_install: true %}
-    </div>
     <div class="footer__wrapper">
       {%- if section.blocks.size > 0 -%}
         <div class="footer__block-list">
@@ -166,10 +164,12 @@
           {%- endform -%}
 
           <p class="hidden-pocket">© {{ shop.name }}<br>{{ powered_by_link }}</p>
-                            <span data-acsb-custom-trigger="true" style="right: auto; left: 20px; top: auto; bottom: 20px; border-radius: 50%;" data-acsb="trigger"><img src="https://cdn.shopify.com/s/files/1/0479/7893/8534/files/icon-accessibility.svg?v=1617641890"></span>
+          <span data-acsb-custom-trigger="true" style="right: auto; left: 20px; top: auto; bottom: 20px; border-radius: 50%;" data-acsb="trigger"><img src="https://cdn.shopify.com/s/files/1/0479/7893/8534/files/icon-accessibility.svg?v=1617641890"></span>
+		  <br>
+          	<a href="#" class="iubenda-ccpa-opt-out">Do Not Sell My Personal Information</a>
+
 
         </div>
-
         {%- if section.settings.show_social_media -%}
           {%- capture social_media -%}{% render 'social-media', show_social_media_name: false %}{%- endcapture -%}
 

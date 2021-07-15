@@ -91,7 +91,7 @@
                 <div  class="quick-links__image-container">
                   <div class="quick-links__image-ie-fix">
                     <div class="aspect-ratio" style="padding-bottom: {{ 100.0 | divided_by: collection_image.aspect_ratio }}%">
-                      <img class="lazyload image--fade-in" data-src="{{ collection_image | img_url: '280x' }}" alt="{{ collection_image.alt | escape }}">
+                      <img class="lazyload image--fade-in" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="{{ collection_image | img_url: '280x' }}" alt="{{ collection_image.alt | escape }}">
 
                       <noscript>
                         <img src="{{ collection_image | img_url: '280x' }}" alt="{{ collection_image.alt | escape }}">

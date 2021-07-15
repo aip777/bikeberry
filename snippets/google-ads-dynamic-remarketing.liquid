@@ -1,6 +1,6 @@
 <!-- Global site tag (gtag.js) - AdWords: -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1049196230"></script>
-<script>
+<script type="lazyload2" data-src="https://www.googletagmanager.com/gtag/js?id=AW-1049196230"></script>
+<script type="lazyload2">
  window.dataLayer = window.dataLayer || [];
  function gtag(){dataLayer.push(arguments);}
  gtag('js', new Date());
@@ -8,21 +8,21 @@
 gtag('config', 'AW-1049196230');
 </script>
 {% if template contains 'index' %}
-<script>
+<script type="lazyload2">
  gtag('event', 'page_view', {
  'send_to': 'AW-1049196230',
  'ecomm_pagetype': ‘home’
  });
 </script>
 {% elsif template contains 'collection' %}
-<script>
+<script type="lazyload2">
  gtag('event', 'page_view', {
  'send_to': 'AW-1049196230',
  'ecomm_pagetype': 'category'
  });
 </script>
 {% elsif template contains 'product' %}
-<script>
+<script type="lazyload2">
  gtag('event', 'page_view', {
  'send_to': 'AW-1049196230',
  'ecomm_pagetype': 'product',
@@ -31,7 +31,7 @@ gtag('config', 'AW-1049196230');
  });
 </script>
 {% elsif template contains 'cart' %}
-<script>
+<script type="lazyload2">
  gtag('event', 'page_view', {
  'send_to': 'AW-1049196230',
  'ecomm_pagetype': 'cart',
@@ -40,18 +40,17 @@ gtag('config', 'AW-1049196230');
  });
 </script>
 {% elsif template contains 'search' %}
-<script>
+<script type="lazyload2">
  gtag('event', 'page_view', {
  'send_to': 'AW-1049196230',
  'ecomm_pagetype': 'searchresults'
  });
 </script>
 {% else %}
-<script>
+<script type="lazyload2">
  gtag('event', 'page_view', {
  'send_to': 'AW-1049196230',
  'ecomm_pagetype': 'other'
  });
 </script>
 {% endif %}
-    
