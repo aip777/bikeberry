@@ -1,0 +1,57 @@
+<!-- Global site tag (gtag.js) - AdWords: -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1049196230"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+
+gtag('config', 'AW-1049196230');
+</script>
+{% if template contains 'index' %}
+<script>
+ gtag('event', 'page_view', {
+ 'send_to': 'AW-1049196230',
+ 'ecomm_pagetype': ‘home’
+ });
+</script>
+{% elsif template contains 'collection' %}
+<script>
+ gtag('event', 'page_view', {
+ 'send_to': 'AW-1049196230',
+ 'ecomm_pagetype': 'category'
+ });
+</script>
+{% elsif template contains 'product' %}
+<script>
+ gtag('event', 'page_view', {
+ 'send_to': 'AW-1049196230',
+ 'ecomm_pagetype': 'product',
+ 'ecomm_prodid': '{{ product.id }}',
+ 'ecomm_totalvalue': '{{ product.price | money_without_currency | remove: ',' }}'
+ });
+</script>
+{% elsif template contains 'cart' %}
+<script>
+ gtag('event', 'page_view', {
+ 'send_to': 'AW-1049196230',
+ 'ecomm_pagetype': 'cart',
+ 'ecomm_prodid': [{% for item in cart.items %}'{{item.product.id}}'{% unless forloop.last %},{% endunless %}{% endfor %}],
+ 'ecomm_totalvalue': '{{cart.total_price | money_without_currency | remove: ',' }}'
+ });
+</script>
+{% elsif template contains 'search' %}
+<script>
+ gtag('event', 'page_view', {
+ 'send_to': 'AW-1049196230',
+ 'ecomm_pagetype': 'searchresults'
+ });
+</script>
+{% else %}
+<script>
+ gtag('event', 'page_view', {
+ 'send_to': 'AW-1049196230',
+ 'ecomm_pagetype': 'other'
+ });
+</script>
+{% endif %}
+    

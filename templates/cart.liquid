@@ -1,0 +1,9 @@
+
+<!-- amai_stp-added -->
+{% render 'amai_stp-cart-snippet' %}
+<!-- /amai_stp-added -->
+{% section 'cart-template' %}
+
+{%- if cart.item_count > 0 -%}
+  {% section 'static-recently-viewed-products' %}
+{%- endif -%}
